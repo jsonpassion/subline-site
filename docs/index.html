@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Subline 서브라인 — 어떤 영상이든, 자막이 흐른다</title>
+<meta name="description" content="Subline(서브라인)은 macOS용 영상 플레이어입니다. 온디바이스 음성 인식으로 어떤 영상·음성이든 실시간 자막을 만들고, 번역까지 한 줄 더 얹어줍니다. 영상은 Mac 밖으로 나가지 않습니다. 로그인 없음, 추적 없음." />
+<meta property="og:title" content="Subline 서브라인 — 어떤 영상이든, 자막이 흐른다" />
+<meta property="og:description" content="온디바이스 AI가 만드는 실시간 자막 + 번역. 영상은 Mac 밖으로 나가지 않습니다." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' fill='%231F4DFF'/%3E%3Cpath d='M26 18 L45 29.5 L26 41 Z' fill='white'/%3E%3Crect x='17' y='46' width='30' height='5.5' rx='2.75' fill='%23FFD43B'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="14" fill="#1F4DFF"/><path d="M26 18 L45 29.5 L26 41 Z" fill="#fff"/><rect x="17" y="46" width="30" height="5.5" rx="2.75" fill="#FFD43B"/></svg>
+      Subline <span class="kr">서브라인</span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">사용 방법</a>
+      <a href="#features">기능</a>
+      <a href="#shortcuts">단축키</a>
+      <a href="#demo">미리 보기</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn primary nav-cta" href="#download">다운로드</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero wrap" id="download">
+  <div>
+    <span class="tag">macOS · 온디바이스 AI 자막</span>
+    <h1>어떤 영상이든,<br /><span class="hl">자막</span>이 흐른다</h1>
+    <p class="sub">
+      자막 없는 강의, 외국어 영상, 오래된 녹화 파일 —
+      Subline이 말소리를 알아듣고 <strong>실시간 자막</strong>을 만들어 드립니다.
+      번역까지 한 줄 더. 전부 <strong>내 Mac 안에서</strong>, 인터넷 없이.
+    </p>
+    <span class="hero-caption" id="heroCaption">어떤 영상이든, 자막이 흐른다</span>
+    <div class="hero-ctas">
+      <!-- TODO: 출시 후 App Store 링크로 교체 -->
+      <a class="store-badge" href="#" onclick="alert('App Store 출시 준비 중입니다!'); return false;">
+        <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor" aria-hidden="true"><path d="M18.3 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.7 1.1-4.6 1.1-1 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.1 1.5 12.1 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 4-1s2.4 1 4 .9c1.7 0 2.7-1.5 3.7-3 1.2-1.7 1.6-3.4 1.7-3.5-.1 0-3.2-1.2-3.3-4.5zM15.2 4.8c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7z"/></svg>
+        <span><small>Download on the</small><span class="big">Mac App Store</span></span>
+      </a>
+      <a class="btn ghost" href="#features">어떻게 다른가요?</a>
+    </div>
+  </div>
+
+  <!-- CSS-drawn app preview -->
+  <div class="mac-window" aria-hidden="true">
+    <div class="mac-titlebar">
+      <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+      <span class="mac-title">Subline</span>
+    </div>
+    <div class="mock-body">
+      <div class="mock-sidebar">
+        <div class="mock-side-row">📁 스페인어 회화</div>
+        <div class="mock-side-row on">▶ Lesson 03.mp4</div>
+        <div class="mock-side-row">Lesson 04.mp4</div>
+        <div class="mock-side-row">다큐_바다.mov</div>
+        <div class="mock-side-row">인터뷰 원본.m4a</div>
+        <div class="mock-side-row">WWDC 키노트.mp4</div>
+      </div>
+      <div class="mock-stage">
+        <div class="mock-glow"></div>
+        <div class="mock-wave">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="mock-cap" id="mockCap">
+          <span class="en">Subtitles appear as people speak.</span>
+          <span class="ko">말하는 대로 자막이 나타납니다.</span>
+        </div>
+        <div class="mock-controls">
+          <span class="tri">▶</span>
+          <div class="mock-progress"><i></i></div>
+          <span class="mock-time">12:41 / 28:07</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= HOW ======================= -->
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>세 걸음이면 끝나요</h2>
+      <p>회원가입도, 설정 지옥도 없습니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num" style="background: var(--blue-bright);">1</div>
+        <h3>영상을 끌어다 놓기</h3>
+        <p>영상이든 음성이든, 창에 떨어뜨리면 재생목록이 되고 바로 재생됩니다. ⌘O도 좋아요.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background: var(--yellow);">2</div>
+        <h3>자막 언어 선택</h3>
+        <p>말소리의 언어를 고르면 끝. 언어팩은 한 번만 내려받으면 오프라인에서도 동작합니다.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background: var(--mint);">3</div>
+        <h3>자막이 흐른다</h3>
+        <p>온디바이스 음성 인식이 자막을 실시간으로 그려냅니다. 원하면 번역이 한 줄 더 따라옵니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FEATURES ======================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>플레이어가 아니라, <u>자막 기계</u>입니다</h2>
+      <p>자막이 없다는 이유로 못 보는 영상은 이제 없습니다.</p>
+    </div>
+    <div class="grid">
+      <div class="feature">
+        <span class="icon">🎙️</span>
+        <h3>실시간 자막 생성</h3>
+        <p>Apple의 온디바이스 음성 인식으로 재생 중인 영상·음성의 자막을 즉석에서 만들어냅니다.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🔒</span>
+        <h3>파일은 Mac 밖으로 안 나가요</h3>
+        <p>인식도 번역도 전부 기기 안에서. 영상이 서버로 업로드되는 일은 없습니다.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🌐</span>
+        <h3>실시간 번역</h3>
+        <p>원문 자막 아래 번역이 한 줄 더 흐릅니다. 외국어 공부에도, 그냥 편하게 보기에도.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📜</span>
+        <h3>자막 목록 & 장면 점프</h3>
+        <p>전체 대사를 한눈에 훑고 검색하세요. 줄을 클릭하면 그 장면으로 바로 이동합니다.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📤</span>
+        <h3>SRT 내보내기</h3>
+        <p>만들어진 자막은 SRT·텍스트 파일로 저장해 어디서든 다시 쓸 수 있습니다.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">⚡️</span>
+        <h3>재생목록 통째로 분석</h3>
+        <p>버튼 하나로 재생목록 전체의 자막을 미리 준비해 둡니다. 보면서 기다릴 필요 없어요.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🗂️</span>
+        <h3>폴더 재생목록 & 이어보기</h3>
+        <p>폴더로 정리하고, 드래그로 순서를 바꾸고, 껐다 켜도 보던 지점부터 이어봅니다.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">⌨️</span>
+        <h3>손에 익는 조작</h3>
+        <p>Space·A/S·Z/X 단축키, 핀치 줌과 두 손가락 팬 — 마우스 없이도 전부 됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRIVACY BAND ======================= -->
+<section>
+  <div class="wrap">
+    <div class="privacy-band">
+      <span class="shield">🛡️</span>
+      <div>
+        <h3>프라이버시가 기본값</h3>
+        <p>
+          Subline은 계정도, 서버도, 추적도 없습니다. 음성 인식과 번역은 Apple의
+          <strong>온디바이스 프레임워크</strong>로 기기 안에서만 실행되고,
+          재생목록·자막·설정은 전부 내 Mac에만 저장됩니다.
+          개발자는 여러분이 무엇을 보는지 알 수 없고, 알고 싶지도 않습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SHORTCUTS ======================= -->
+<section id="shortcuts" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>키보드에서 손을 떼지 마세요</h2>
+      <p>자주 쓰는 조작은 전부 한 손 거리 안에 있습니다.</p>
+    </div>
+    <div class="keys">
+      <div class="key-row"><div class="kcaps"><span class="kcap">Space</span></div><span>재생 / 일시정지</span></div>
+      <div class="key-row"><div class="kcaps"><span class="kcap">A</span><span class="kcap">S</span></div><span>10초 뒤로 / 앞으로</span></div>
+      <div class="key-row"><div class="kcaps"><span class="kcap">Z</span><span class="kcap">X</span><span class="kcap">C</span></div><span>재생 속도 −/＋/초기화</span></div>
+      <div class="key-row"><div class="kcaps"><span class="kcap">V</span></div><span>자막 켜기 / 끄기</span></div>
+      <div class="key-row"><div class="kcaps"><span class="kcap">⌘</span><span class="kcap">O</span></div><span>영상·음성 파일 열기</span></div>
+      <div class="key-row"><div class="kcaps"><span class="kcap">⌥</span><span class="kcap">←→</span></div><span>미세 이동 (5초)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DEMO ======================= -->
+<section id="demo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>다운로드 전에, 느낌만 먼저</h2>
+      <p>재생을 누르면 Subline이 자막을 만드는 모습 그대로 재현됩니다.</p>
+    </div>
+    <div class="demo-card">
+      <div class="demo-stage" id="demoStage">
+        <button class="demo-play" id="demoPlay" aria-label="데모 재생">▶</button>
+        <div class="demo-cap" id="demoCap"><span class="en"></span><span class="ko"></span></div>
+      </div>
+      <div class="demo-transcript" id="demoTranscript"></div>
+      <p class="demo-note">실제 앱과 동일한 흐름 — 말이 끝나기 전에 자막이 먼저 도착합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><h2>자주 묻는 질문</h2></div>
+    <div class="faq">
+      <details>
+        <summary>어떤 파일을 재생할 수 있나요?</summary>
+        <p>macOS가 기본으로 지원하는 영상·음성 형식(MP4, MOV, M4V, M4A, MP3, WAV 등)을 재생할 수 있습니다. 영상뿐 아니라 음성 파일에도 똑같이 자막(스크립트)이 만들어집니다.</p>
+      </details>
+      <details>
+        <summary>인터넷이 필요한가요?</summary>
+        <p>자막 언어팩과 번역 모델을 처음 내려받을 때만 필요합니다. 그 후에는 완전히 오프라인으로 동작합니다. 여러분의 영상이 네트워크로 전송되는 일은 없습니다.</p>
+      </details>
+      <details>
+        <summary>어떤 언어를 알아듣나요?</summary>
+        <p>Apple 온디바이스 음성 인식이 지원하는 언어(한국어, 영어, 일본어, 중국어, 스페인어 등 다수)를 지원합니다. 설정에서 언어를 고르면 필요한 언어팩을 안내해 드립니다.</p>
+      </details>
+      <details>
+        <summary>자막 정확도는 어느 정도인가요?</summary>
+        <p>발음과 녹음 품질에 따라 다르지만, 강의·인터뷰처럼 또렷한 음성에서는 매우 좋은 결과를 보여줍니다. 자동 인식 결과이므로 완벽하지는 않을 수 있고, 만들어진 자막은 SRT로 내보내 자유롭게 다듬을 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>로그인이나 회원가입이 필요한가요?</summary>
+        <p>아니요. 계정 없이 바로 시작합니다. 개발자 서버가 아예 없으며, 데이터는 전부 내 Mac에만 저장됩니다.</p>
+      </details>
+      <details>
+        <summary>시스템 요구 사항은요?</summary>
+        <p>macOS 26 이상이 설치된 Apple Silicon Mac에서 동작합니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <span class="brand">Subline · 서브라인</span>
+    <a href="privacy.html">개인정보 처리방침</a>
+    <a href="terms.html">이용약관</a>
+    <a class="contact-btn" href="mailto:forgelab.aitech@gmail.com?subject=%5BSubline%5D%20%EB%AC%B8%EC%9D%98">✉️ 문의하기</a>
+    <span class="copy">© 2026 ForgeLab</span>
+    <span class="biz">ForgeLab · 대표 Jason Lee</span>
+  </div>
+</footer>
+
+<script>
+/* ---------- Scroll spy ---------- */
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var targets = Object.keys(byId).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (a) { a.classList.remove('active'); });
+      var link = byId[entry.target.id];
+      if (link) link.classList.add('active');
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  targets.forEach(function (t) { observer.observe(t); });
+})();
+
+/* ---------- Hero: cycling caption pairs ---------- */
+(function () {
+  var PAIRS = [
+    ['Subtitles appear as people speak.', '말하는 대로 자막이 나타납니다.'],
+    ['No sign-up. No servers. No tracking.', '로그인도, 서버도, 추적도 없습니다.'],
+    ['Your videos never leave this Mac.', '영상은 이 Mac 밖으로 나가지 않아요.'],
+    ['Learn languages straight from any video.', '어떤 영상으로든 바로 어학 공부.'],
+  ];
+  var cap = document.getElementById('mockCap');
+  var hero = document.getElementById('heroCaption');
+  var HEROES = ['어떤 영상이든, 자막이 흐른다', '자막 없는 영상은, 이제 없다', '보고 싶은 영상부터, 자막은 Subline이'];
+  var i = 0, h = 0;
+  setInterval(function () {
+    i = (i + 1) % PAIRS.length;
+    cap.style.opacity = 0;
+    setTimeout(function () {
+      cap.querySelector('.en').textContent = PAIRS[i][0];
+      cap.querySelector('.ko').textContent = PAIRS[i][1];
+      cap.style.opacity = 1;
+    }, 250);
+  }, 3400);
+  setInterval(function () {
+    h = (h + 1) % HEROES.length;
+    hero.textContent = HEROES[h];
+  }, 5100);
+})();
+
+/* ---------- Demo: simulated live transcription ---------- */
+(function () {
+  var LINES = [
+    ['00:01', 'Welcome back to the studio.', '스튜디오에 다시 오신 것을 환영합니다.'],
+    ['00:04', "Today we're testing something new.", '오늘은 새로운 것을 시험해 볼 거예요.'],
+    ['00:08', 'You just drop a video in — that\'s it.', '영상을 끌어다 놓기만 하면 끝이에요.'],
+    ['00:12', 'The subtitles are generated on your Mac.', '자막은 여러분의 Mac에서 만들어집니다.'],
+    ['00:16', 'Nothing is uploaded, ever.', '그 무엇도 업로드되지 않아요, 절대로.'],
+    ['00:19', 'And yes — it translates too.', '그리고 네, 번역도 됩니다.'],
+  ];
+  var playBtn = document.getElementById('demoPlay');
+  var cap = document.getElementById('demoCap');
+  var transcript = document.getElementById('demoTranscript');
+  var timers = [];
+  var running = false;
+
+  playBtn.addEventListener('click', function () {
+    if (running) return;
+    running = true;
+    playBtn.style.display = 'none';
+    transcript.innerHTML = '';
+    LINES.forEach(function (line, idx) {
+      timers.push(setTimeout(function () {
+        cap.querySelector('.en').textContent = line[1];
+        cap.querySelector('.ko').textContent = line[2];
+        cap.classList.add('show');
+        var el = document.createElement('div');
+        el.className = 'demo-line';
+        el.innerHTML = '<span class="t">' + line[0] + '</span>' +
+          '<span class="txt">' + line[1] + '<em>' + line[2] + '</em></span>';
+        transcript.appendChild(el);
+        transcript.scrollTop = transcript.scrollHeight;
+        if (idx === LINES.length - 1) {
+          timers.push(setTimeout(function () {
+            cap.classList.remove('show');
+            playBtn.style.display = '';
+            playBtn.textContent = '↻';
+            running = false;
+          }, 2600));
+        }
+      }, 900 + idx * 2100));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
