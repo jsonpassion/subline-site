@@ -1,6 +1,6 @@
 # subline-site
 
-[Subline](https://github.com/jsonpassion/BestPlayer)(서브라인) — macOS용 온디바이스 자막 플레이어 —
+[Subline](https://github.com/jsonpassion/Subline)(서브라인) — macOS용 온디바이스 자막 플레이어 —
 의 소개 웹사이트와 법적 문서 저장소.
 
 배포: GitHub Pages (`main` 브랜치의 `/docs`)
