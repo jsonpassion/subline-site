@@ -114,6 +114,33 @@
   </div>
 </section>
 
+<!-- ======================= MOTION (Lottie) ======================= -->
+<section id="motion">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>움직임으로 보는 Subline</h2>
+      <p>세 가지 장면이면 이 앱이 하는 일을 전부 설명할 수 있어요.</p>
+    </div>
+    <div class="motion-grid">
+      <div class="motion-card">
+        <div class="motion-anim" data-lottie="lottie/captions.json" aria-hidden="true"></div>
+        <h3>말소리가, 자막으로</h3>
+        <p>재생 중인 음성을 알아듣고 자막 줄을 실시간으로 그려냅니다. 기다림 없이, 말하는 속도 그대로.</p>
+      </div>
+      <div class="motion-card">
+        <div class="motion-anim" data-lottie="lottie/translate.json" aria-hidden="true"></div>
+        <h3>원문 아래, 번역 한 줄</h3>
+        <p>온디바이스 번역이 자막마다 노란 줄 하나를 더 얹습니다. 언어 공부에도, 편하게 보기에도.</p>
+      </div>
+      <div class="motion-card">
+        <div class="motion-anim" data-lottie="lottie/privacy.json" aria-hidden="true"></div>
+        <h3>전부, 이 안에서</h3>
+        <p>영상도 자막도 Mac 밖으로 나가지 않습니다. 서버 없음, 계정 없음 — 잠금이 기본값.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= FEATURES ======================= -->
 <section id="features">
   <div class="wrap">
@@ -306,7 +333,32 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 <script>
+/* ---------- Lottie feature cards (pause when offscreen) ---------- */
+(function () {
+  if (!window.lottie) return;
+  var pairs = [];
+  document.querySelectorAll('.motion-anim[data-lottie]').forEach(function (el) {
+    pairs.push([el, lottie.loadAnimation({
+      container: el,
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: el.dataset.lottie
+    })]);
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      pairs.forEach(function (p) {
+        if (p[0] !== entry.target) return;
+        entry.isIntersecting ? p[1].play() : p[1].pause();
+      });
+    });
+  }, { threshold: 0.2 });
+  pairs.forEach(function (p) { io.observe(p[0]); });
+})();
+
 /* ---------- Scroll spy ---------- */
 (function () {
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
