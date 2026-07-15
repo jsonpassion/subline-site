@@ -22,7 +22,7 @@
     </a>
     <div class="nav-links">
       <a href="#how">사용 방법</a>
-      <a href="#motion">기능</a>
+      <a href="#features">기능</a>
       <a href="#shortcuts">단축키</a>
       <a href="#demo">미리 보기</a>
       <a href="#pricing">가격</a>
@@ -122,30 +122,17 @@
   </div>
 </section>
 
-<!-- ======================= MOTION (Lottie) ======================= -->
-<section id="motion">
-  <div class="wrap">
-    <div class="sec-head" data-reveal="up">
-      <span class="sec-kicker">In motion</span>
-      <h2>움직임으로 보는 <span class="hl">Subline</span></h2>
-      <p>세 장면이면, 이 앱이 하는 일을 전부 설명할 수 있어요.</p>
-    </div>
-    <div class="motion-grid">
-      <div class="motion-card" data-reveal="left">
-        <div class="motion-anim" data-lottie="lottie/captions.json" aria-hidden="true"></div>
-        <h3>말소리가, 자막으로</h3>
-        <p>재생 중인 음성을 알아듣고 자막 줄을 실시간으로 그려냅니다. 기다림 없이, 말하는 속도 그대로.</p>
-      </div>
-      <div class="motion-card" data-reveal="up" data-reveal-delay="140">
-        <div class="motion-anim" data-lottie="lottie/translate.json" aria-hidden="true"></div>
-        <h3>원문 아래, 번역 한 줄</h3>
-        <p>온디바이스 번역이 자막마다 노란 줄 하나를 더 얹습니다. 언어 공부에도, 편하게 보기에도.</p>
-      </div>
-      <div class="motion-card" data-reveal="right" data-reveal-delay="280">
-        <div class="motion-anim" data-lottie="lottie/privacy.json" aria-hidden="true"></div>
-        <h3>전부, 이 안에서</h3>
-        <p>영상도 자막도 Mac 밖으로 나가지 않습니다. 서버 없음, 계정 없음 — 잠금이 기본값.</p>
-      </div>
+<!-- ======================= CINEMATIC BAND · WATCH ======================= -->
+<section id="motion" class="cine">
+  <video class="cine-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/watch.jpg">
+    <source src="assets/video/watch.mp4" type="video/mp4" />
+  </video>
+  <div class="cine-scrim left"></div>
+  <div class="cine-inner">
+    <div class="cine-copy" data-reveal="left">
+      <span class="sec-kicker">The moment</span>
+      <h2>자막이 없어서<br />못 보던 영상은,<br /><span class="hl">이제 없다</span></h2>
+      <p>외국어 강의도, 자막 빠진 영화도, 오래된 녹화도. 재생을 누르는 순간 말소리가 자막이 되어 흐릅니다 — 원문 위에 번역 한 줄까지.</p>
     </div>
   </div>
 </section>
@@ -193,20 +180,22 @@
   </div>
 </section>
 
-<!-- ======================= PRIVACY BAND ======================= -->
-<section>
-  <div class="wrap">
-    <div class="privacy-band" data-reveal="zoom">
-      <span class="shield">🛡️</span>
-      <div>
-        <h3>프라이버시가 기본값입니다</h3>
-        <p>
-          Subline은 계정도, 서버도, 추적도 없습니다. 음성 인식과 번역은 Apple의
-          <strong>온디바이스 프레임워크</strong>로 기기 안에서만 실행되고,
-          재생목록·자막·설정은 전부 당신의 Mac에만 남습니다.
-          개발자는 당신이 무엇을 보는지 알 수 없고, 알고 싶지도 않습니다.
-        </p>
-      </div>
+<!-- ======================= CINEMATIC BAND · PRIVACY ======================= -->
+<section class="cine tall">
+  <video class="cine-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/privacy.jpg">
+    <source src="assets/video/privacy.mp4" type="video/mp4" />
+  </video>
+  <div class="cine-scrim full"></div>
+  <div class="cine-inner center">
+    <div class="cine-copy narrow" data-reveal="up">
+      <span class="sec-kicker">On-device</span>
+      <h2>영상은 이 <span class="hl">Mac</span>을<br />떠나지 않습니다</h2>
+      <p>
+        계정도, 서버도, 추적도 없습니다. 음성 인식과 번역은 Apple의
+        <strong>온디바이스 프레임워크</strong>로 기기 안에서만 실행되고,
+        재생목록·자막·설정은 전부 당신의 Mac에만 남습니다.
+        개발자는 당신이 무엇을 보는지 알 수 없고, 알고 싶지도 않습니다.
+      </p>
     </div>
   </div>
 </section>
@@ -324,11 +313,15 @@
   </div>
 </section>
 
-<!-- ======================= PRE-FOOTER CTA ======================= -->
-<section>
-  <div class="cta-inner">
-    <div class="cta" data-reveal="zoom">
-      <h2>보고 싶은 영상부터,<br />자막은 Subline이</h2>
+<!-- ======================= CINEMATIC BAND · CLOSING CTA ======================= -->
+<section class="cine tall">
+  <video class="cine-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/flow.jpg">
+    <source src="assets/video/flow.mp4" type="video/mp4" />
+  </video>
+  <div class="cine-scrim full"></div>
+  <div class="cine-inner center">
+    <div class="cine-copy center-copy" data-reveal="up">
+      <h2>보고 싶은 영상부터,<br />자막은 <span class="hl">Subline</span>이</h2>
       <p>다운로드는 무료. 첫 영상 20개는 자막까지 전부 공짜입니다.</p>
       <div class="hero-ctas">
         <a class="store-badge" href="#" onclick="alert('App Store 출시 준비 중입니다!'); return false;">
@@ -353,8 +346,28 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 <script>
+/* ---------- Cinematic bands: pause offscreen, honor reduced-motion ---------- */
+(function () {
+  var vids = Array.prototype.slice.call(document.querySelectorAll('.cine-video'));
+  if (!vids.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    // Show the poster only — never autoplay motion.
+    vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    return;
+  }
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var v = entry.target;
+      if (entry.isIntersecting) { v.play().catch(function () {}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.1 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+
 /* ---------- Scroll reveal (IntersectionObserver + safety net) ---------- */
 (function () {
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
@@ -421,26 +434,6 @@
   }
   // Duplicate the set so the -50% loop is seamless.
   track.innerHTML = (CAPS.map(chip).join('')) + (CAPS.map(chip).join(''));
-})();
-
-/* ---------- Lottie feature cards (pause when offscreen) ---------- */
-(function () {
-  if (!window.lottie) return;
-  var pairs = [];
-  document.querySelectorAll('.motion-anim[data-lottie]').forEach(function (el) {
-    pairs.push([el, lottie.loadAnimation({
-      container: el, renderer: 'svg', loop: true, autoplay: false, path: el.dataset.lottie
-    })]);
-  });
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      pairs.forEach(function (p) {
-        if (p[0] !== entry.target) return;
-        entry.isIntersecting ? p[1].play() : p[1].pause();
-      });
-    });
-  }, { threshold: 0.2 });
-  pairs.forEach(function (p) { io.observe(p[0]); });
 })();
 
 /* ---------- Scroll spy ---------- */
