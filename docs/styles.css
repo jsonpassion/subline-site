@@ -41,6 +41,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* Korean must wrap at 어절 (space) boundaries — the browser default splits
+     mid-word ("영상·음|성의"). break-word is the safety net so a single
+     unbreakable run (a long URL) still can't overflow. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* --- Atmosphere: drifting aurora + fine grain, both fixed behind content --- */
@@ -71,6 +76,12 @@ body::after {
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 
 a { color: var(--blue-bright); text-decoration: none; }
+
+/* Binds a short interpunct compound ("영상·음성") into one unbreakable unit —
+   keep-all still allows a break after the ·, which leaves it dangling at the
+   end of a line. Only for short compounds; long ·-chains must stay breakable
+   so they can't overflow a narrow column. */
+.nb { white-space: nowrap; }
 
 /* ------------------------- Scroll-reveal system ------------------------- */
 [data-reveal] {
