@@ -7,15 +7,15 @@
    ========================================================================== */
 
 :root {
-  --bg: #060712;
-  --bg-2: #0a0c18;
-  --panel: rgba(255, 255, 255, 0.025);
-  --panel-solid: #10131f;
-  --hairline: rgba(255, 255, 255, 0.08);
-  --hairline-2: rgba(255, 255, 255, 0.16);
+  --bg: #101736;
+  --bg-2: #151d40;
+  --panel: rgba(255, 255, 255, 0.05);
+  --panel-solid: #1c2447;
+  --hairline: rgba(255, 255, 255, 0.11);
+  --hairline-2: rgba(255, 255, 255, 0.22);
   --text: #f4f6fb;
-  --body: #a7afc6;
-  --dim: #6b7488;
+  --body: #b6bed8;
+  --dim: #818ba8;
 
   --blue: #2f5bff;
   --blue-bright: #6d8cff;
@@ -98,7 +98,7 @@ a { color: var(--blue-bright); text-decoration: none; }
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(6, 7, 18, 0.7);
+  background: rgba(16, 23, 54, 0.7);
   backdrop-filter: blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-bottom-color: var(--hairline);
@@ -142,13 +142,13 @@ a { color: var(--blue-bright); text-decoration: none; }
 .hero-shell { position: relative; overflow: hidden; }
 .hero-bg {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; opacity: 0.5; z-index: 0;
+  object-fit: cover; opacity: 0.78; z-index: 0;
 }
 .hero-scrim {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(90deg, rgba(6, 7, 18, 0.88) 0%, rgba(6, 7, 18, 0.55) 46%, rgba(6, 7, 18, 0.2) 100%),
-    linear-gradient(180deg, rgba(6, 7, 18, 0.5) 0%, rgba(6, 7, 18, 0.1) 42%, var(--bg) 98%);
+    linear-gradient(90deg, rgba(16, 23, 54, 0.78) 0%, rgba(16, 23, 54, 0.42) 46%, rgba(16, 23, 54, 0.08) 100%),
+    linear-gradient(180deg, rgba(16, 23, 54, 0.3) 0%, rgba(16, 23, 54, 0.04) 42%, var(--bg) 98%);
 }
 .hero {
   display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
@@ -221,7 +221,7 @@ a { color: var(--blue-bright); text-decoration: none; }
 .mac-title { margin: 0 auto; font-size: 12px; color: var(--dim); font-weight: 600; padding-right: 40px; }
 
 .mock-body { display: grid; grid-template-columns: 138px 1fr; }
-.mock-sidebar { border-right: 1px solid var(--hairline); padding: 10px 8px; background: rgba(6, 7, 18, 0.5); }
+.mock-sidebar { border-right: 1px solid var(--hairline); padding: 10px 8px; background: rgba(16, 23, 54, 0.5); }
 .mock-side-row {
   font-size: 10.5px; color: var(--body); padding: 7px 8px; border-radius: 7px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -262,7 +262,7 @@ a { color: var(--blue-bright); text-decoration: none; }
 .marquee {
   position: relative; padding: 24px 0; overflow: hidden;
   border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
-  background: rgba(6, 7, 18, 0.4);
+  background: rgba(16, 23, 54, 0.4);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
@@ -350,10 +350,10 @@ section { padding: 112px 0; position: relative; }
 .cine-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
 .cine-scrim { position: absolute; inset: 0; z-index: 1; }
 .cine-scrim.left {
-  background: linear-gradient(90deg, rgba(6, 7, 18, 0.9) 0%, rgba(6, 7, 18, 0.66) 36%, rgba(6, 7, 18, 0.1) 64%, transparent 100%);
+  background: linear-gradient(90deg, rgba(16, 23, 54, 0.9) 0%, rgba(16, 23, 54, 0.66) 36%, rgba(16, 23, 54, 0.1) 64%, transparent 100%);
 }
 .cine-scrim.full {
-  background: radial-gradient(72% 92% at 50% 50%, rgba(6, 7, 18, 0.56), rgba(6, 7, 18, 0.88));
+  background: radial-gradient(72% 92% at 50% 50%, rgba(16, 23, 54, 0.46), rgba(16, 23, 54, 0.76));
 }
 .cine-inner { position: relative; z-index: 2; max-width: var(--wrap); margin: 0 auto; padding: 72px 24px; width: 100%; }
 .cine-inner.center { text-align: center; }
@@ -497,7 +497,7 @@ body.en .lang-ko { display: none; }
   .nav-links a:not(.nav-cta) { display: none; }
   .cine { min-height: 420px; }
   .cine.tall { min-height: 460px; }
-  .cine-scrim.left { background: linear-gradient(180deg, rgba(6, 7, 18, 0.55), rgba(6, 7, 18, 0.88)); }
+  .cine-scrim.left { background: linear-gradient(180deg, rgba(16, 23, 54, 0.55), rgba(16, 23, 54, 0.88)); }
 }
 @media (max-width: 560px) {
   section { padding: 80px 0; }
