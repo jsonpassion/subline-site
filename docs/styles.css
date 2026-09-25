@@ -3,7 +3,7 @@
    Nocturne Editorial: a dark cinema at night, restrained and typographic.
    Boxes, badges and emoji chrome are gone — atmosphere comes from three
    human film clips, hairline rules, and generous space. Brand blue
-   #2F5BFF, caption yellow #FFD84D.
+   #1F4DFF, caption yellow #FFD43B.
    ========================================================================== */
 
 :root {
@@ -17,12 +17,12 @@
   --body: #b6bed8;
   --dim: #818ba8;
 
-  --blue: #2f5bff;
-  --blue-bright: #6d8cff;
+  --blue: #1F4DFF;
+  --blue-bright: #5b79ff;
   --indigo: #5a49e6;
   --violet: #9a6bff;
-  --yellow: #ffd84d;
-  --mint: #5ee9b5;
+  --yellow: #FFD43B;
+  --mint: #6be6b3;
 
   --radius: 18px;
   --radius-lg: 24px;
@@ -52,7 +52,7 @@ body::before {
   position: fixed; inset: -20% -10% -20% -10%;
   z-index: -2;
   background:
-    radial-gradient(38% 42% at 18% 12%, rgba(47, 91, 255, 0.22), transparent 70%),
+    radial-gradient(38% 42% at 18% 12%, rgba(31, 77, 255, 0.22), transparent 70%),
     radial-gradient(34% 40% at 82% 20%, rgba(154, 107, 255, 0.16), transparent 72%),
     radial-gradient(46% 46% at 62% 78%, rgba(90, 73, 230, 0.15), transparent 72%);
   filter: blur(22px);
@@ -111,7 +111,7 @@ a { color: var(--blue-bright); text-decoration: none; }
   display: flex; align-items: center; gap: 10px;
   font-weight: 900; font-size: 19px; color: var(--text); letter-spacing: -0.3px;
 }
-.logo svg { display: block; filter: drop-shadow(0 3px 10px rgba(47, 91, 255, 0.45)); }
+.logo svg { display: block; filter: drop-shadow(0 3px 10px rgba(31, 77, 255, 0.45)); }
 .logo .kr { font-size: 12px; font-weight: 700; color: var(--dim); margin-top: 3px; }
 .nav-links { margin-left: auto; display: flex; align-items: center; gap: 26px; }
 .nav-links a { color: var(--body); font-size: 14px; font-weight: 600; position: relative; transition: color 0.2s ease; }
@@ -131,11 +131,11 @@ a { color: var(--blue-bright); text-decoration: none; }
 }
 .btn.primary {
   background: linear-gradient(135deg, var(--blue), var(--indigo));
-  color: #fff; box-shadow: 0 8px 28px rgba(47, 91, 255, 0.35);
+  color: #fff; box-shadow: 0 8px 28px rgba(31, 77, 255, 0.35);
 }
-.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(47, 91, 255, 0.5); }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(31, 77, 255, 0.5); }
 .btn.ghost { background: rgba(255, 255, 255, 0.03); color: var(--text); border: 1px solid var(--hairline-2); }
-.btn.ghost:hover { border-color: var(--blue-bright); background: rgba(109, 140, 255, 0.08); }
+.btn.ghost:hover { border-color: var(--blue-bright); background: rgba(91, 121, 255, 0.08); }
 .nav-cta { padding: 9px 20px; font-size: 13px; }
 
 /* ------------------------------ Hero ------------------------------ */
@@ -165,17 +165,11 @@ a { color: var(--blue-bright); text-decoration: none; }
   display: inline-flex; align-items: center; gap: 9px; margin-top: 30px;
   background: rgba(0, 0, 0, 0.45); color: var(--yellow);
   font-size: 14.5px; font-weight: 700;
-  padding: 9px 18px; border-radius: 999px;
-  border: 1px solid rgba(255, 216, 77, 0.22);
+  padding: 9px 18px; border-radius: 8px;
+  border: 1px solid rgba(255, 212, 59, 0.22);
   backdrop-filter: blur(6px);
   transition: opacity 0.4s ease;
 }
-.hero-caption::before {
-  content: ""; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--yellow); box-shadow: 0 0 9px var(--yellow);
-  animation: pulse 1.8s ease-in-out infinite;
-}
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 .hero-ctas { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 
 .store-badge {
@@ -190,12 +184,9 @@ a { color: var(--blue-bright); text-decoration: none; }
 .store-badge .big { display: block; font-size: 17px; font-weight: 800; }
 
 .tag {
-  display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px;
-  background: rgba(47, 91, 255, 0.1); border: 1px solid rgba(109, 140, 255, 0.26);
-  color: var(--blue-bright); font-size: 12.5px; font-weight: 700; letter-spacing: 0.3px;
-  margin-bottom: 24px;
+  display: block; color: var(--blue-bright); font-size: 13px; font-weight: 800;
+  letter-spacing: 1px; margin-bottom: 20px;
 }
-.tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 8px var(--mint); }
 
 /* --------------------- Mac window mock (hero) --------------------- */
 .hero-stage { position: relative; z-index: 1; }
@@ -226,10 +217,10 @@ a { color: var(--blue-bright); text-decoration: none; }
   font-size: 10.5px; color: var(--body); padding: 7px 8px; border-radius: 7px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.mock-side-row.on { background: linear-gradient(90deg, rgba(47, 91, 255, 0.3), rgba(47, 91, 255, 0.06)); color: var(--text); font-weight: 700; }
+.mock-side-row.on { background: linear-gradient(90deg, rgba(31, 77, 255, 0.3), rgba(31, 77, 255, 0.06)); color: var(--text); font-weight: 700; }
 
 .mock-stage { position: relative; aspect-ratio: 16 / 10.6; background: linear-gradient(135deg, #182247 0%, #0d1020 55%, #241a34 100%); overflow: hidden; }
-.mock-glow { position: absolute; inset: 0; background: radial-gradient(60% 55% at 62% 34%, rgba(109, 140, 255, 0.3), transparent 70%); }
+.mock-glow { position: absolute; inset: 0; background: radial-gradient(60% 55% at 62% 34%, rgba(91, 121, 255, 0.3), transparent 70%); }
 .mock-wave { position: absolute; left: 0; right: 0; top: 34%; display: flex; align-items: center; justify-content: center; gap: 4px; height: 46px; }
 .mock-wave i { width: 4px; border-radius: 3px; background: var(--blue-bright); opacity: 0.85; animation: wave 1.15s ease-in-out infinite; }
 .mock-wave i:nth-child(2n) { animation-delay: 0.15s; background: var(--mint); }
@@ -270,11 +261,10 @@ a { color: var(--blue-bright); text-decoration: none; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 .cap-chip {
   display: inline-flex; align-items: baseline; gap: 10px; flex-shrink: 0;
-  border: 1px solid var(--hairline);
-  border-radius: 999px; padding: 9px 20px; font-size: 13.5px; white-space: nowrap;
+  padding: 9px 22px 9px 0; font-size: 13.5px; white-space: nowrap;
+  border-right: 1px solid var(--hairline);
 }
-.cap-chip .o { color: var(--text); font-weight: 600; }
-.cap-chip .t { color: var(--yellow); font-size: 12.5px; font-weight: 600; }
+.cap-chip .o { color: var(--yellow); font-weight: 600; }
 .cap-chip .lang { color: var(--dim); font-size: 10.5px; font-weight: 800; letter-spacing: 0.4px; text-transform: uppercase; }
 
 /* ------------------------------ Sections ------------------------------ */
@@ -303,8 +293,8 @@ section { padding: 112px 0; position: relative; }
 .flow-step h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 8px; }
 .flow-step p { color: var(--body); font-size: 14px; max-width: 26ch; margin: 0 auto; }
 .flow-sep {
-  align-self: center; color: var(--dim); font-size: 18px; font-weight: 300;
-  padding-top: 6px;
+  align-self: center; width: 36px; height: 1px; background: var(--hairline-2);
+  margin-top: 6px;
 }
 
 /* Features — editorial two-column list, hairline rules, no boxes */
@@ -320,10 +310,8 @@ section { padding: 112px 0; position: relative; }
 .feat h3 em { display: block; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--dim); text-transform: uppercase; margin-top: 3px; }
 .feat p { color: var(--body); font-size: 14px; line-height: 1.65; }
 .feat p .pro {
-  display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px;
-  font-size: 10.5px; font-weight: 800; letter-spacing: 0.5px;
-  color: var(--yellow); border: 1px solid rgba(255, 216, 77, 0.35);
-  vertical-align: 2px;
+  margin-left: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1px;
+  color: var(--yellow); vertical-align: 1px;
 }
 
 /* Privacy — a quiet typographic statement, no chrome */
@@ -391,7 +379,7 @@ section { padding: 112px 0; position: relative; }
   width: 72px; height: 72px; border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--indigo)); border: none; cursor: pointer;
   color: #fff; font-size: 25px; padding-left: 6px;
-  box-shadow: 0 12px 40px rgba(47, 91, 255, 0.5);
+  box-shadow: 0 12px 40px rgba(31, 77, 255, 0.5);
   transition: transform 0.16s var(--ease-out);
 }
 .demo-play:hover { transform: scale(1.08); }
@@ -420,9 +408,9 @@ section { padding: 112px 0; position: relative; }
 }
 .price-card:hover { transform: translateY(-4px); border-color: var(--hairline-2); }
 .price-card.hot {
-  border-color: rgba(109, 140, 255, 0.45);
-  background: linear-gradient(180deg, rgba(47, 91, 255, 0.07), rgba(255, 255, 255, 0.02) 60%);
-  box-shadow: 0 22px 70px rgba(47, 91, 255, 0.2);
+  border-color: rgba(91, 121, 255, 0.45);
+  background: linear-gradient(180deg, rgba(31, 77, 255, 0.07), rgba(255, 255, 255, 0.02) 60%);
+  box-shadow: 0 22px 70px rgba(31, 77, 255, 0.2);
 }
 .price-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 14px; }
 .price-card .price { font-size: 42px; font-weight: 900; letter-spacing: -1.4px; }
@@ -433,10 +421,8 @@ section { padding: 112px 0; position: relative; }
 .price-card.hot li::before { color: var(--yellow); }
 .price-card li strong { color: var(--text); }
 .sale-badge {
-  position: absolute; top: -13px; right: 26px;
-  background: linear-gradient(135deg, var(--yellow), #ffb84d); color: #0b0d12;
-  font-size: 12px; font-weight: 900; padding: 6px 15px; border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(255, 184, 77, 0.3);
+  display: block; color: var(--yellow); font-size: 12.5px; font-weight: 800;
+  letter-spacing: 0.5px; margin-bottom: 6px;
 }
 
 /* FAQ */
